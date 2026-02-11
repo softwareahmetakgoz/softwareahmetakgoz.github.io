@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Payment - Ahmet Akgöz</title>
+<title>Secure Payment - Ahmet Akgöz</title>
 <style>
 body {
     font-family: Arial;
@@ -12,20 +12,21 @@ body {
     padding:40px;
 }
 .container {
-    max-width:700px;
+    max-width:750px;
     margin:auto;
 }
 .box {
     background:#1e293b;
-    padding:30px;
-    border-radius:10px;
+    padding:35px;
+    border-radius:12px;
 }
 .address {
     background:#111827;
     padding:15px;
-    border-radius:5px;
+    border-radius:6px;
     word-break:break-all;
     margin:20px 0;
+    font-size:14px;
 }
 button {
     background:#22c55e;
@@ -33,11 +34,22 @@ button {
     border:none;
     color:white;
     cursor:pointer;
-    border-radius:5px;
+    border-radius:6px;
     font-size:16px;
+    margin-top:10px;
+}
+.badges {
+    margin-top:25px;
+    font-size:14px;
+    color:#cbd5e1;
+}
+.warning {
+    margin-top:20px;
+    color:#f87171;
+    font-size:14px;
 }
 .note {
-    margin-top:20px;
+    margin-top:25px;
     font-size:14px;
     color:#cbd5e1;
 }
@@ -48,10 +60,10 @@ button {
 <div class="container">
 <div class="box">
 
-<h1>USDT (TRC20) Payment</h1>
+<h1>🔐 Secure USDT (TRC20) Payment</h1>
 
-<h2>Send exactly: 30 USDT</h2>
-<p>Network: TRC20 (TRON)</p>
+<h2>Send Exactly: 30 USDT</h2>
+<p>Network: <strong>TRC20 (TRON)</strong></p>
 
 <div class="address" id="tronAddress">
 TWyMGW1ypYafKnexMCNr83xpso5zPNb3SY
@@ -59,8 +71,19 @@ TWyMGW1ypYafKnexMCNr83xpso5zPNb3SY
 
 <button onclick="copyAddress()">Copy Address</button>
 
+<div class="badges">
+✅ Secure Blockchain Payment<br>
+✅ Instant Digital Delivery<br>
+✅ One-Time Payment (No Subscription)
+</div>
+
+<div class="warning">
+⚠ IMPORTANT: Send only via TRC20 network.  
+Sending from wrong network may result in permanent loss.
+</div>
+
 <div class="note">
-After payment, send your TxID to:<br>
+After payment, send your TxID to:<br><br>
 📧 software.developer.ahmet@gmail.com<br>
 💬 Telegram: @softwareahmet<br><br>
 Delivery within 12 hours.
@@ -73,7 +96,7 @@ Delivery within 12 hours.
 function copyAddress() {
   var text = document.getElementById("tronAddress").innerText;
   navigator.clipboard.writeText(text);
-  alert("Address copied!");
+  alert("Address copied successfully!");
 }
 </script>
 
